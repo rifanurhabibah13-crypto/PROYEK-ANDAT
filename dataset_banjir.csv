@@ -1,0 +1,89 @@
+Kabupaten/Kota;Banjir;Banjir Bandang;curah_hujan;;;;;;;;;;;;;;;
+Cilacap;69;7;201,71;;;;; ;;;;;;;;;;
+Banyumas;84;2;232,91;;;;;;;;;;;;;;;
+Purbalingga;26;0;153,08;;;;;;;;;;No.;Kabupaten/Kota;Frekuensi Banjir (Kejadian);Banjir Bandang (Kejadian);Curah Hujan (mm);Provinsi
+Banjarnegara;8;0;150,19;;;;;;;;;;16;Jakarta Timur;120;0;185,5;DKI Jakarta
+Kebumen;112;3;212,12;;;;;;;;;;17;Jakarta Utara;90;0;170,3;DKI Jakarta
+Purworejo;74;0;88,81;;;;;;;;;;18;Bekasi (Kota);115;1;175,9;Jawa Barat
+Wonosobo;5;0;139,67;;;;;;;;;;19;Bekasi (Kab);88;1;160,1;Jawa Barat
+Magelang;7;1;154,91;;;;;;;;;;20;Karawang;75;0;155,2;Jawa Barat
+Boyolali;31;1;104,82;;;;;;;;;;21;Tangerang (Kota);85;0;165,8;Banten
+Klaten;51;0;158,91;;;;;;;;;;22;Bogor (Kab);45;15;250,5;Jawa Barat
+Sukoharjo;19;0;73,84;;;;;;;;;;23;Bandung (Kota);55;0;168,1;Jawa Barat
+Wonogiri;32;1;110,46;;;;;;;;;;24;Bandung (Kab);40;5;180,3;Jawa Barat
+Karanganyar;14;0;95,41;;;;;;;;;;25;Cianjur;20;8;210,4;Jawa Barat
+Sragen;21;0;122,91;;;;;;;;;;26;Garut;25;10;190,2;Jawa Barat
+Grobogan;69;8;175,72;;;;;;;;;;27;Tasikmalaya (Kota);35;4;178;Jawa Barat
+Blora;17;1;107,05;;;;;;;;;;28;Indramayu;60;0;145,9;Jawa Barat
+Rembang;19;1;101,4;;;;;;;;;;29;Cirebon (Kota);50;0;135,5;Jawa Barat
+Pati;74;24;128,74;;;;;;;;;;30;Subang;65;0;140,7;Jawa Barat
+Kudus;36;2;67,06;;;;;;;;;;31;Serang (Kota);40;0;150;Banten
+Jepara;19;2;95,22;;;;;;;;;;32;Lebak;30;7;200,9;Banten
+Demak;40;2;151,74;;;;;;;;;;33;Semarang (Kota);105;0;195,8;Jawa Tengah
+Semarang;35;3;83,61;;;;;;;;;;34;Demak;95;2;185,5;Jawa Tengah
+Temanggung;15;0;79,09;;;;;;;;;;35;Pati;80;0;165,3;Jawa Tengah
+Kendal;84;0;100,01;;;;;;;;;;36;Surabaya;88;0;160,9;Jawa Timur
+Batang;24;2;74,91;;;;;;;;;;37;Gresik;55;0;155;Jawa Timur
+Pekalongan;55;0;95,26;;;;;;;;;;38;Sidoarjo;70;0;168,4;Jawa Timur
+Pemalang;32;2;215,08;;;;;;;;;;39;Lamongan;45;0;148,7;Jawa Timur
+Tegal;39;3;123,52;;;;;;;;;;40;Bojonegoro;30;0;130,5;Jawa Timur
+Brebes;68;3;314,95;;;;;;;;;;41;Malang (Kota);22;2;170,1;Jawa Timur
+Kota Magelang;0;0;9,44;;;;;;;;;;42;Probolinggo (Kab);18;4;165,5;Jawa Timur
+Kota Surakarta;4;0;48,79;;;;;;;;;;43;Jember;25;6;185,8;Jawa Timur
+Kota Salatiga;0;0;10,14;;;;;;;;;;44;Banyuwangi;35;3;175;Jawa Timur
+Kota Semarang;43;1;84,45;;;;;;;;;;45;Ponorogo;20;5;160,2;Jawa Timur
+Kota Pekalongan;22;0;23,49;;;;;;;;;;46;Medan;95;1;180,5;Sumatera Utara
+Kota Tegal;1;0;20,27;;;;;;;;;;47;Deli Serdang;60;3;175,2;Sumatera Utara
+;;;;;;;;;;;;;48;Palembang;80;0;165,7;Sumatera Selatan
+;;;;;;;;;;;;;49;Musi Banyuasin;45;2;150,1;Sumatera Selatan
+;;;;;;;;;;;;;50;Jambi (Kota);50;0;145,9;Jambi
+;;;;;;;;;;;;;51;Pekanbaru;70;0;155,5;Riau
+;;;;;;;;;;;;;52;Banda Aceh;40;1;130,1;Aceh
+;;;;;;;;;;;;;53;Aceh Utara;35;5;140,8;Aceh
+;;;;;;;;;;;;;54;Padang;65;4;240,1;Sumatera Barat
+;;;;;;;;;;;;;55;Bandar Lampung;55;1;158,6;Lampung
+;;;;;;;;;;;;;56;Banjarmasin;110;0;155,9;Kalimantan Selatan
+;;;;;;;;;;;;;57;Banjarbaru;65;0;148,5;Kalimantan Selatan
+;;;;;;;;;;;;;58;Kutai Kartanegara;40;3;160,1;Kalimantan Timur
+;;;;;;;;;;;;;59;Samarinda;80;1;165,3;Kalimantan Timur
+;;;;;;;;;;;;;60;Pontianak;75;0;170,4;Kalimantan Barat
+;;;;;;;;;;;;;61;Makassar;90;2;180,8;Sulawesi Selatan
+;;;;;;;;;;;;;62;Gowa;50;3;175;Sulawesi Selatan
+;;;;;;;;;;;;;63;Manado;35;6;190,5;Sulawesi Utara
+;;;;;;;;;;;;;64;Palu;20;9;160;Sulawesi Tengah
+;;;;;;;;;;;;;65;Ambon;25;5;155,1;Maluku
+;;;;;;;;;;;;;66;Jayapura;15;4;145,3;Papua
+;;;;;;;;;;;;;67;Denpasar;20;0;130,9;Bali
+;;;;;;;;;;;;;68;Mataram;15;1;125,5;Nusa Tenggara Barat
+;;;;;;;;;;;;;69;Kupang;10;0;110,8;Nusa Tenggara Timur
+;;;;;;;;;;;;;70;Majalengka;30;0;150,2;Jawa Barat
+;;;;;;;;;;;;;71;Pekalongan (Kota);65;0;180,1;Jawa Tengah
+;;;;;;;;;;;;;72;Tegal (Kota);25;0;125,9;Jawa Tengah
+;;;;;;;;;;;;;73;Madiun (Kota);18;0;135,1;Jawa Timur
+;;;;;;;;;;;;;74;Mojokerto (Kota);22;0;140,8;Jawa Timur
+;;;;;;;;;;;;;75;Kediri (Kota);28;0;148;Jawa Timur
+;;;;;;;;;;;;;76;Blitar (Kab);15;3;165,9;Jawa Timur
+;;;;;;;;;;;;;77;Tulungagung;24;0;150,3;Jawa Timur
+;;;;;;;;;;;;;78;Jombang;38;0;155,2;Jawa Timur
+;;;;;;;;;;;;;79;Bima;18;7;135,4;Nusa Tenggara Barat
+;;;;;;;;;;;;;80;Luwu Utara;12;10;220,1;Sulawesi Selatan
+;;;;;;;;;;;;;81;Bandung Barat;30;5;175,8;Jawa Barat
+;;;;;;;;;;;;;82;Bogor (Kota);60;4;240,5;Jawa Barat
+;;;;;;;;;;;;;83;Depok;70;1;160,7;Jawa Barat
+;;;;;;;;;;;;;84;Kepulauan Seribu;10;0;145,5;DKI Jakarta
+;;;;;;;;;;;;;85;Jakarta Pusat;80;0;178,2;DKI Jakarta
+;;;;;;;;;;;;;86;Jakarta Selatan;75;1;190,4;DKI Jakarta
+;;;;;;;;;;;;;87;Jakarta Barat;95;0;188,1;DKI Jakarta
+;;;;;;;;;;;;;88;Kota Bekasi;110;1;172,9;Jawa Barat
+;;;;;;;;;;;;;89;Kota Bogor;60;4;240,5;Jawa Barat
+;;;;;;;;;;;;;90;Kutai Barat;20;3;155,4;Kalimantan Timur
+;;;;;;;;;;;;;91;Berau;15;2;150,9;Kalimantan Timur
+;;;;;;;;;;;;;92;Kapuas Hulu;25;5;180,2;Kalimantan Barat
+;;;;;;;;;;;;;93;Sintang;35;4;175,1;Kalimantan Barat
+;;;;;;;;;;;;;94;Bangka (Kab);40;1;150,5;Bangka Belitung
+;;;;;;;;;;;;;95;Belitung (Kab);30;0;145,1;Bangka Belitung
+;;;;;;;;;;;;;96;Batam;50;0;135;Kepulauan Riau
+;;;;;;;;;;;;;97;Tanjungpinang;45;0;140,2;Kepulauan Riau
+;;;;;;;;;;;;;98;Banda Aceh;35;1;130,1;Aceh
+;;;;;;;;;;;;;99;Lhokseumawe;40;0;135,3;Aceh
+;;;;;;;;;;;;;100;Mamuju;20;7;185,1;Sulawesi Barat
