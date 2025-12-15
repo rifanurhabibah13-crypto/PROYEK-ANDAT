@@ -19,7 +19,8 @@ st.markdown("### Analisis Data Bencana Alam berdasarkan Curah Hujan")
 # --- 2. Muat Data dan Model ---
 
 MODEL_FILE = 'model_prediksi_banjir.pkl'
-DATA_FILE = 'dataset_banjir.csv'
+# UBAH NAMA FILE INI AGAR SESUAI DENGAN YANG ANDA UPLOAD KE GITHUB
+DATA_FILE = 'dataset_banjir.csv' 
 
 # Muat Model Prediksi
 @st.cache_resource
@@ -36,43 +37,48 @@ model = load_model(MODEL_FILE)
 @st.cache_data
 def load_and_clean_data(file_path):
     try:
-        # PERBAIKAN KRITIS 1: Hapus 'header=1' agar Pandas membaca baris pertama sebagai header (header=0 default)
-        # Baris pertama berisi: Kabupaten/Kota;Banjir;Banjir Bandang;curah_hujan
+        # PERBAIKAN 1: Hapus header=1
         df = pd.read_csv(file_path, sep=';') 
     except FileNotFoundError:
-        st.error(f"❌ File data tidak ditemukan di: {file_path}. Cek path GitHub Anda.")
+        st.error(f"❌ Error: File data tidak ditemukan di: {file_path}. Cek nama file dan path di GitHub.")
         return pd.DataFrame()
     except Exception as e:
-        st.error(f"❌ Error saat membaca data: {e}. Cek delimiter.")
+        st.error(f"❌ Error saat membaca data: {e}. Cek delimiter (';').")
         return pd.DataFrame()
 
-    # PERBAIKAN KRITIS 2: Hapus semua kolom yang seluruhnya kosong (berasal dari ;;;;; di CSV)
-    df = df.dropna(axis=1, how='all')
+    # PERBAIKAN 2: Membersihkan dan menstandardisasi kolom
+    df = df.dropna(axis=1, how='all') # Drop kolom yang seluruhnya kosong (penting!)
     df = df.drop_duplicates()
-    
-    # PERBAIKAN KRITIS 3: Menstandardisasi nama kolom
+
+    # Standardisasi nama kolom dari header CSV yang terbaca
     try:
-        # Nama kolom dari CSV: ['Kabupaten/Kota', 'Banjir', 'Banjir Bandang', 'curah_hujan']
-        # Rename agar mudah dipanggil dan menghilangkan spasi/kapitalisasi
         df.rename(columns={
             'Kabupaten/Kota': 'Kabupaten_Kota',
             'Banjir Bandang': 'Banjir_Bandang',
-            'curah_hujan': 'Curah_Hujan' # Mengubah huruf kecil ke kapital
+            'curah_hujan': 'Curah_Hujan' # Mengubah kapitalisasi
         }, inplace=True)
     except Exception:
-        # Jika renaming gagal, mungkin struktur kolom berbeda, kembalikan DataFrame kosong
-        return pd.DataFrame()
+        # Lanjutkan jika renaming gagal, mungkin data sudah dimuat tapi kolomnya kacau
+        pass
 
+    # Hanya ambil 4 kolom utama yang kita butuhkan
+    COLUMNS_TO_KEEP = ['Kabupaten_Kota', 'Banjir', 'Banjir_Bandang', 'Curah_Hujan']
+    # Filter hanya kolom yang ada di DataFrame setelah renaming
+    df = df[[col for col in COLUMNS_TO_KEEP if col in df.columns]]
+    
     kolom_numerik = ['Banjir', 'Banjir_Bandang', 'Curah_Hujan']
     for col in kolom_numerik:
-        # Mengatasi desimal koma (,) menjadi titik (.)
-        if df[col].dtype == 'object':
-             df[col] = df[col].astype(str).str.replace(',', '.', regex=False)
-        # Konversi ke numerik, memaksa error ke NaN
-        df[col] = pd.to_numeric(df[col], errors='coerce') 
+        if col in df.columns:
+            # Mengatasi koma (,) sebagai desimal
+            if df[col].dtype == 'object':
+                 df[col] = df[col].astype(str).str.replace(',', '.', regex=False)
+            df[col] = pd.to_numeric(df[col], errors='coerce')
 
-    # Mengisi nilai yang hilang/error konversi dengan 0 dan menghitung total bencana
     df[kolom_numerik] = df[kolom_numerik].fillna(0)
+    
+    # Hapus baris yang mungkin kosong/rusak akibat data di tengah yang kacau
+    df = df.dropna(subset=['Kabupaten_Kota'])
+
     df['Total_Bencana'] = df['Banjir'] + df['Banjir_Bandang']
 
     return df
@@ -80,19 +86,28 @@ def load_and_clean_data(file_path):
 # --- 3. Tampilkan Data dan Mulai Dashboard ---
 df_data = load_and_clean_data(DATA_FILE)
 
+# ... Lanjutkan sisa kode Streamlit Anda untuk menampilkan dashboard ...
 if not df_data.empty:
     st.sidebar.success("✅ Data berhasil dimuat dan dibersihkan.")
-    
     # Tampilkan 5 baris data pertama di sidebar (opsional)
     st.sidebar.subheader("Pratinjau Data")
     st.sidebar.dataframe(df_data.head(), use_container_width=True)
-    
-    # Lanjutkan dengan kode visualisasi dan prediksi Anda di sini
-    # Contoh:
-    st.subheader("Data Analisis (15 Lokasi Awal)")
-    st.dataframe(df_data)
 
-    # ... Tambahkan kode visualisasi lainnya (misalnya plot sns atau plt)
+    # Tambahkan visualisasi jika ada
+    st.subheader("Data Analisis")
+    st.dataframe(df_data, use_container_width=True)
+
+    # ... Tambahkan kode visualisasi dan prediksi Anda ...
     
+    if model is not None:
+        # Logika Prediksi Anda di sini
+        st.header("3. Prediksi Bencana")
+        # Kode prediksi Anda di sini (Pastikan identasi 4 SPASI)
+        
+        # ...
+        
+    else:
+        st.warning("Model Prediksi belum berhasil dimuat.")
+
 else:
     st.error("Gagal memuat atau memproses data. Cek file CSV dan parameter 'sep=;'.")
